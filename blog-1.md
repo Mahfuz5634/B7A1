@@ -1,4 +1,4 @@
-# 🛑 Why "any" is a Type Safety Hole & Why "unknown" is Safer
+# Why "any" is a Type Safety Hole & Why "unknown" is Safer
 
 ## 📌 Introduction
 
@@ -8,14 +8,14 @@ In this blog, we’ll understand why `any` is risky, why `unknown` is safer, and
 
 ---
 
-## ⚠️ What is `any` (Type Safety Hole)?
+##  What is `any` (Type Safety Hole)?
 
 The `any` type disables TypeScript’s type checking completely.
 
 ```ts
 let data: any = "Hello";
 data = 42;
-data.toUpperCase(); // ❌ Runtime error
+data.toUpperCase(); // Runtime error
 ```
 
 ### ❗ Problem:
@@ -24,25 +24,25 @@ data.toUpperCase(); // ❌ Runtime error
 * You can perform any operation (even invalid ones)
 * Errors are only caught at runtime, not during development
 
-👉 This is why `any` is called a **"type safety hole"** — it breaks TypeScript’s main purpose.
+ This is why `any` is called a **"type safety hole"** — it breaks TypeScript’s main purpose.
 
 ---
 
-## ✅ What is `unknown` (Safer Choice)?
+## What is `unknown` (Safer Choice)?
 
 The `unknown` type is a safer alternative to `any`.
 
 ```ts
 let data: unknown = "Hello";
 
-// data.toUpperCase(); ❌ Not allowed
+// data.toUpperCase();  Not allowed
 
 if (typeof data === "string") {
   console.log(data.toUpperCase()); // ✅ Safe
 }
 ```
 
-### 👍 Benefits:
+###  Benefits:
 
 * Forces you to check the type before using it
 * Prevents unexpected runtime errors
@@ -66,21 +66,21 @@ function printValue(value: unknown) {
 }
 ```
 
-👉 Here, we narrow down the type from `unknown` to specific types like `string` or `number`.
+ Here, we narrow down the type from `unknown` to specific types like `string` or `number`.
 
 ---
 
-## 💡 Real-Life Analogy
+##  Real-Life Analogy
 
-Think of `any` as trusting everyone blindly 😅
+Think of `any` as trusting everyone blindly 
 And `unknown` as verifying identity before trusting ✅
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
-* `any` = no type safety ❌
+* `any` = no type safety 
 * `unknown` = safe and controlled ✅
 * Type narrowing = essential for handling unknown data
 
-👉 Always prefer `unknown` over `any` to write clean, safe, and professional TypeScript code.
+ Always prefer `unknown` over `any` to write clean, safe, and professional TypeScript code.
