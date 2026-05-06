@@ -1,4 +1,4 @@
-# ✂️ Pick & Omit in TypeScript: Keep Your Code DRY
+# Pick & Omit in TypeScript: Keep Your Code DRY
 
 ## 📌 Introduction
 
@@ -8,7 +8,7 @@ TypeScript solves this problem with two powerful utility types: **Pick** and **O
 
 ---
 
-## 🧱 The Problem (Code Duplication)
+## The Problem (Code Duplication)
 
 Consider this interface:
 
@@ -26,11 +26,11 @@ Now imagine:
 * For public profile → you don’t need `password`
 * For login → you only need `email` and `password`
 
-Creating new interfaces manually would repeat code ❌
+Creating new interfaces manually would repeat code 
 
 ---
 
-## ✂️ Using `Pick`
+## Using `Pick`
 
 `Pick` allows you to select only specific properties.
 
@@ -43,11 +43,11 @@ const user: PublicUser = {
 };
 ```
 
-👉 Only selected fields are included
+ Only selected fields are included
 
 ---
 
-## 🚫 Using `Omit`
+## Using `Omit`
 
 `Omit` removes specific properties from a type.
 
@@ -61,18 +61,18 @@ const user: SafeUser = {
 };
 ```
 
-👉 Everything except `password`
+ Everything except `password`
 
 ---
 
-## 💡 Why This Matters (DRY Principle)
+## Why This Matters (DRY Principle)
 
 DRY = **Don't Repeat Yourself**
 
 Without Pick/Omit:
 
-* Duplicate code ❌
-* Hard to maintain ❌
+* Duplicate code 
+* Hard to maintain 
 
 With Pick/Omit:
 
@@ -82,19 +82,19 @@ With Pick/Omit:
 
 ---
 
-## 🧠 Real-Life Analogy
+## Real-Life Analogy
 
-Think of a big pizza 🍕
+Think of a big pizza 
 
 * `Pick` → you take only slices you want
 * `Omit` → you remove slices you don’t want
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
 * `Pick` = choose what you need
 * `Omit` = remove what you don’t need
 * Keeps your code DRY, clean, and maintainable
 
-👉 These small tools can make a big difference in writing professional TypeScript code 🚀
+ These small tools can make a big difference in writing professional TypeScript code 🚀
