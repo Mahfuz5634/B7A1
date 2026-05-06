@@ -97,4 +97,4 @@ Think of a big pizza
 * `Omit` = remove what you don’t need
 * Keeps your code DRY, clean, and maintainable
 
- These small tools can make a big difference in writing professional TypeScript code 🚀
+ These small tools can make a big difference in writing professional TypeScript code 
