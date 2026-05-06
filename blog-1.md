@@ -18,7 +18,7 @@ data = 42;
 data.toUpperCase(); // Runtime error
 ```
 
-### ❗ Problem:
+### Problem:
 
 * TypeScript stops checking types
 * You can perform any operation (even invalid ones)
@@ -50,7 +50,7 @@ if (typeof data === "string") {
 
 ---
 
-## 🔍 What is Type Narrowing?
+##  What is Type Narrowing?
 
 Type narrowing means **checking and refining the type before using a value**.
 
